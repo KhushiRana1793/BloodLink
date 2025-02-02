@@ -132,8 +132,6 @@ async function notifyBloodSeeker1(
   donorPhone
 ) {
   try {
-    const twilioClient = twilio("Auhi", "bhkjm");
-
     // If the request status is 'accepted', send the notification message
     const message = `Dear blood seeker, \n\nThe donor has accepted your request. Here are the details:\n\nName: ${donorName}\nPhone: ${donorPhone}\n\nThank you for using BloodLink.`;
 
@@ -222,7 +220,6 @@ app.post("/send-request", async (req, res) => {
         donorsFound = true;
 
         // Use Twilio to send an SMS to each phone number
-        const twilioClient = twilio("Ah", "hu");
 
         const requestMessage = `\nPatient Name: ${req.body.patientName} \n  Age: ${req.body.patientAge} \nAccepted Blood Group: ${acceptedBloodGroup} \n Phone: ${req.body.patientPhone} \n Address : ${req.body.patientAddress} \n.  Click here to accept the request: ${acceptLink} \n. Click here to decline the request: ${declineLink}`;
         console.log(requestMessage);
@@ -284,7 +281,7 @@ app.get("/accept-request/:requestId/accept", async (req, res) => {
       // If the request already has status 'accepted', return an error response
       return res.status(400).json({ message: "Request already accepted" });
     } else {
-      // If the request exists but status is not 'accepted', update the status to 'accepted'
+      // If thessss request exists but status is not 'accepted', update the status to 'accepted'
       await RequestModel.findOneAndUpdate(
         { requestId: requestId },
         { $set: { status: "accepted" } }
