@@ -132,10 +132,7 @@ async function notifyBloodSeeker1(
   donorPhone
 ) {
   try {
-    const twilioClient = twilio(
-      "ACbbfb67ce04dfc6a007e11b4ab3d65ed4",
-      "259d5cc742cba1c67a81bd42b640687c"
-    );
+    const twilioClient = twilio("Auhi", "bhkjm");
 
     // If the request status is 'accepted', send the notification message
     const message = `Dear blood seeker, \n\nThe donor has accepted your request. Here are the details:\n\nName: ${donorName}\nPhone: ${donorPhone}\n\nThank you for using BloodLink.`;
@@ -225,10 +222,7 @@ app.post("/send-request", async (req, res) => {
         donorsFound = true;
 
         // Use Twilio to send an SMS to each phone number
-        const twilioClient = twilio(
-          "ACbbfb67ce04dfc6a007e11b4ab3d65ed4",
-          "259d5cc742cba1c67a81bd42b640687c"
-        );
+        const twilioClient = twilio("Ah", "hu");
 
         const requestMessage = `\nPatient Name: ${req.body.patientName} \n  Age: ${req.body.patientAge} \nAccepted Blood Group: ${acceptedBloodGroup} \n Phone: ${req.body.patientPhone} \n Address : ${req.body.patientAddress} \n.  Click here to accept the request: ${acceptLink} \n. Click here to decline the request: ${declineLink}`;
         console.log(requestMessage);
