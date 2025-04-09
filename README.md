@@ -6,3 +6,6 @@ For seekers, there's a feature to check if blood is available in nearby blood ba
 The platform uses technology like geolocation to find donors near the seeker. It also sends notifications through Twilio, a messaging service. If no nearby donors are available, the platform expands the search radius until a donor is found.
 
 In addition to connecting donors and seekers, BloodLink plans to have a community section where donors can share their experiences, and educational content about blood donation is provided to raise awareness and encourage more people to donate blood. Overall, BloodLink aims to make it easier for people to find blood donors and promote blood donation in the community.
+
+
+ 
